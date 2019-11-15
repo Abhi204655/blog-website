@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+    {% block content %}
+        {% for blog in blogs%}
+            <div class="blog-box">
+                <div class="author-box">
+                    <div class="author-name"><h1>{{blog.author}}</h1></div>
+                    <div class="blog-time"><h2>{{blog.datePosted}}</h2></div>
+                </div>
+                <div class="blog-data">
+                    <div class="blog-title">
+                        <h1>{{blog.title}}</h1>
+                    </div>
+                    <div class="blog-content">
+                        <p>{{blog.content}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    {%endblock%}
